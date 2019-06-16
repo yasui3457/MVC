@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ikg-iq-tHr">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="B9f-sE-9ZI">
+            <objects>
+                <navigationController id="Ikg-iq-tHr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oEi-ba-Bv5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="W0Q-6F-UbA" kind="relationship" relationship="rootViewController" id="bfd-9G-6As"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xMm-BI-s3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-484" y="589"/>
+        </scene>
+        <!--Qiita検索-->
+        <scene sceneID="NiE-It-d9A">
+            <objects>
+                <viewController id="W0Q-6F-UbA" customClass="SearchViewController" customModule="MVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ifb-8J-2Tk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="fLk-Op-tdu">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dO7-VZ-V8S">
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qqU-QB-1zU">
+                                    <size key="itemSize" width="375" height="60"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="oJ1-j3-BhR">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dO7-VZ-V8S" firstAttribute="top" secondItem="fLk-Op-tdu" secondAttribute="bottom" id="HOI-qW-zbV"/>
+                            <constraint firstItem="dO7-VZ-V8S" firstAttribute="bottom" secondItem="cdD-Dd-3sF" secondAttribute="bottom" id="a9F-Gz-D95"/>
+                            <constraint firstItem="dO7-VZ-V8S" firstAttribute="leading" secondItem="cdD-Dd-3sF" secondAttribute="leading" id="mAR-Yl-547"/>
+                            <constraint firstItem="fLk-Op-tdu" firstAttribute="leading" secondItem="cdD-Dd-3sF" secondAttribute="leading" id="r1A-Mv-Iwn"/>
+                            <constraint firstItem="fLk-Op-tdu" firstAttribute="top" secondItem="cdD-Dd-3sF" secondAttribute="top" id="u0E-j2-0ak"/>
+                            <constraint firstItem="fLk-Op-tdu" firstAttribute="trailing" secondItem="cdD-Dd-3sF" secondAttribute="trailing" id="uUA-zf-1jI"/>
+                            <constraint firstItem="dO7-VZ-V8S" firstAttribute="trailing" secondItem="cdD-Dd-3sF" secondAttribute="trailing" id="ybp-Qw-cQG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cdD-Dd-3sF"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Qiita検索" id="vXX-te-ZJj"/>
+                    <connections>
+                        <outlet property="searchBar" destination="fLk-Op-tdu" id="vDF-Du-rTr"/>
+                        <outlet property="searchResultView" destination="dO7-VZ-V8S" id="WRL-Sq-DPw"/>
+                        <segue destination="mZz-Kr-hRh" kind="show" identifier="ToBrowser" id="43X-G5-Vsu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nfx-Hm-Djf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="466" y="589"/>
+        </scene>
+        <!--Browser View Controller-->
+        <scene sceneID="uX7-hC-PTT">
+            <objects>
+                <viewController storyboardIdentifier="ToBrowser" id="mZz-Kr-hRh" customClass="BrowserViewController" customModule="MVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ba3-v6-o5C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pyx-gp-flF">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pyx-gp-flF" firstAttribute="top" secondItem="rde-mc-s5B" secondAttribute="top" id="7fF-VC-85P"/>
+                            <constraint firstItem="pyx-gp-flF" firstAttribute="bottom" secondItem="rde-mc-s5B" secondAttribute="bottom" id="GxQ-ww-Sk1"/>
+                            <constraint firstItem="pyx-gp-flF" firstAttribute="trailing" secondItem="rde-mc-s5B" secondAttribute="trailing" id="Tba-4P-hVm"/>
+                            <constraint firstItem="pyx-gp-flF" firstAttribute="leading" secondItem="rde-mc-s5B" secondAttribute="leading" id="byC-fo-cyu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rde-mc-s5B"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="pyx-gp-flF" id="6VU-YM-RxC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cY4-mY-Arw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1292" y="588.75562218890559"/>
+        </scene>
+    </scenes>
+</document>
